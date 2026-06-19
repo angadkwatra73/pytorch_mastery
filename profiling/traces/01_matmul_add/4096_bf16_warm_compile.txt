@@ -1,0 +1,23 @@
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                             matmul_add         0.00%       0.000us         0.00%       0.000us       0.000us      13.172ms       100.02%      13.172ms       4.391ms             3  
+                                          ProfilerStep*         0.42%      70.593us         4.87%     821.466us     273.822us       0.000us         0.00%      13.170ms       4.390ms             3  
+                                             matmul_add         0.86%     145.002us         4.45%     750.873us     250.291us       0.000us         0.00%      13.170ms       4.390ms             3  
+                             Torch-Compiled Region: 0/0         1.19%     201.269us         3.28%     553.121us     184.374us       0.000us         0.00%      13.170ms       4.390ms             3  
+## Call CompiledFxGraph f6nafcrzawzp7k2eiz3lqgmsbktr...         0.54%      90.760us         1.85%     312.578us     104.193us       0.000us         0.00%      13.170ms       4.390ms             3  
+                                            aten::addmm         0.59%     100.171us         1.31%     221.818us      73.939us      13.170ms       100.00%      13.170ms       4.390ms             3  
+void cutlass::Kernel2<cutlass_80_tensorop_bf16_s1681...         0.00%       0.000us         0.00%       0.000us       0.000us      12.736ms        96.71%      12.736ms       4.245ms             3  
+                         Memcpy DtoD (Device -> Device)         0.00%       0.000us         0.00%       0.000us       0.000us     433.572us         3.29%     433.572us     144.524us             3  
+                               TorchDynamo Cache Lookup         0.31%      52.750us         0.31%      52.750us      17.583us       0.000us         0.00%       0.000us       0.000us             3  
+                                      Pregraph bytecode         0.06%      10.069us         0.06%      10.069us       3.356us       0.000us         0.00%       0.000us       0.000us             3  
+                 AOTDispatcher Runtime Wrapper Prologue         0.17%      29.205us         0.17%      29.205us       9.735us       0.000us         0.00%       0.000us       0.000us             3  
+                                          aten::squeeze         0.07%      11.553us         0.08%      13.747us       4.582us       0.000us         0.00%       0.000us       0.000us             3  
+                                       aten::as_strided         0.01%       2.194us         0.01%       2.194us       0.731us       0.000us         0.00%       0.000us       0.000us             3  
+                                        cudaMemcpyAsync         0.36%      60.763us         0.36%      60.763us      20.254us       0.000us         0.00%       0.000us       0.000us             3  
+                                 cudaDeviceGetAttribute         0.01%       1.021us         0.01%       1.021us       0.340us       0.000us         0.00%       0.000us       0.000us             3  
+                                         cuLaunchKernel         0.27%      46.116us         0.27%      46.116us      15.372us       0.000us         0.00%       0.000us       0.000us             3  
+                                  cudaDeviceSynchronize        95.13%      16.051ms        95.13%      16.051ms      16.051ms       0.000us         0.00%       0.000us       0.000us             1  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 16.872ms
+Self CUDA time total: 13.170ms
