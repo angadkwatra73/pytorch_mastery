@@ -11,7 +11,7 @@ Checklislt
 -  [ ] FX Graph
 -  [ ] Torch Dynamo
 -  [ ] torch.compile()
-  - [ ] graph breaks
+    - [ ] graph breaks
 -  [ ] torch.export()
        
 Resources 
