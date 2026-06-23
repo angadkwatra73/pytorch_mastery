@@ -17,6 +17,7 @@ Checklislt
 Resources 
 - [x] [Torch NN and Parameters](https://docs.pytorch.org/tutorials/beginner/introyt/modelsyt_tutorial.html)
 - [x] [Using torch profiler](https://huggingface.co/blog/torch-profiler)
+- [ ] [Torch Dynamo Deep Dive](https://docs.pytorch.org/docs/2.12/user_guide/torch_compiler/torch.compiler_dynamo_deepdive.html)
 - [ ] ⭐[Torch compile](https://docs.pytorch.org/docs/2.12/user_guide/torch_compiler/compile/programming_model.html)
 - [ ] [Graph Break Analysis](https://arxiv.org/abs/2509.16248)
  
