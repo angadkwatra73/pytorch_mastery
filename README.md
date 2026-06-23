@@ -9,11 +9,11 @@ Checklislt
   - How do you view kernel calls?
   - To profile time on GPU vs CPU
 -  [ ] FX Graph
--  [ ] Torch Dynamom
--  [ ] torch.export()
+-  [ ] Torch Dynamo
 -  [ ] torch.compile()
--  [ ] graph breaks
-
+  - [ ] graph breaks
+-  [ ] torch.export()
+       
 Resources 
 - [x] [Torch NN and Parameters](https://docs.pytorch.org/tutorials/beginner/introyt/modelsyt_tutorial.html)
 - [x] [Using torch profiler](https://huggingface.co/blog/torch-profiler)
