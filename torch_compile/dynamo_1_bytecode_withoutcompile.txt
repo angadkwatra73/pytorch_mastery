@@ -1,0 +1,53 @@
+  0           0 RESUME                   0
+
+  1           2 LOAD_CONST               0 (0)
+              4 LOAD_CONST               1 (None)
+              6 IMPORT_NAME              0 (torch)
+              8 STORE_NAME               0 (torch)
+
+  3          10 LOAD_CONST               2 (<code object mse at 0x74de4c696930, file "dynamo_1.py", line 3>)
+             12 MAKE_FUNCTION            0
+             14 STORE_NAME               1 (mse)
+
+  7          16 PUSH_NULL
+             18 LOAD_NAME                0 (torch)
+             20 LOAD_ATTR                4 (randn)
+             40 LOAD_CONST               3 (200)
+             42 CALL                     1
+             50 STORE_NAME               3 (x)
+
+  8          52 PUSH_NULL
+             54 LOAD_NAME                0 (torch)
+             56 LOAD_ATTR                4 (randn)
+             76 LOAD_CONST               3 (200)
+             78 CALL                     1
+             86 STORE_NAME               4 (y)
+
+  9          88 PUSH_NULL
+             90 LOAD_NAME                1 (mse)
+             92 LOAD_NAME                3 (x)
+             94 LOAD_NAME                4 (y)
+             96 CALL                     2
+            104 STORE_NAME               5 (res)
+
+ 10         106 PUSH_NULL
+            108 LOAD_NAME                6 (print)
+            110 LOAD_NAME                5 (res)
+            112 CALL                     1
+            120 POP_TOP
+            122 RETURN_CONST             1 (None)
+
+Disassembly of <code object mse at 0x74de4c696930, file "dynamo_1.py", line 3>:
+  3           0 RESUME                   0
+
+  4           2 LOAD_FAST                0 (x)
+              4 LOAD_FAST                1 (y)
+              6 BINARY_OP               10 (-)
+             10 LOAD_CONST               1 (2)
+             12 BINARY_OP                8 (**)
+             16 STORE_FAST               2 (z)
+
+  5          18 LOAD_FAST                2 (z)
+             20 LOAD_ATTR                1 (NULL|self + sum)
+             40 CALL                     0
+             48 RETURN_VALUE

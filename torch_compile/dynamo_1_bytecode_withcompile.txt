@@ -1,0 +1,59 @@
+  0           0 RESUME                   0
+
+  1           2 LOAD_CONST               0 (0)
+              4 LOAD_CONST               1 (None)
+              6 IMPORT_NAME              0 (torch)
+              8 STORE_NAME               0 (torch)
+
+  3          10 LOAD_NAME                0 (torch)
+             12 LOAD_ATTR                2 (compile)
+
+  4          32 LOAD_CONST               2 (<code object mse at 0x7eb5c1082930, file "dynamo_1.py", line 3>)
+             34 MAKE_FUNCTION            0
+
+  3          36 CALL                     0
+
+  4          44 STORE_NAME               2 (mse)
+
+  8          46 PUSH_NULL
+             48 LOAD_NAME                0 (torch)
+             50 LOAD_ATTR                6 (randn)
+             70 LOAD_CONST               3 (200)
+             72 CALL                     1
+             80 STORE_NAME               4 (x)
+
+  9          82 PUSH_NULL
+             84 LOAD_NAME                0 (torch)
+             86 LOAD_ATTR                6 (randn)
+            106 LOAD_CONST               3 (200)
+            108 CALL                     1
+            116 STORE_NAME               5 (y)
+
+ 10         118 PUSH_NULL
+            120 LOAD_NAME                2 (mse)
+            122 LOAD_NAME                4 (x)
+            124 LOAD_NAME                5 (y)
+            126 CALL                     2
+            134 STORE_NAME               6 (res)
+
+ 11         136 PUSH_NULL
+            138 LOAD_NAME                7 (print)
+            140 LOAD_NAME                6 (res)
+            142 CALL                     1
+            150 POP_TOP
+            152 RETURN_CONST             1 (None)
+
+Disassembly of <code object mse at 0x7eb5c1082930, file "dynamo_1.py", line 3>:
+  3           0 RESUME                   0
+
+  5           2 LOAD_FAST                0 (x)
+              4 LOAD_FAST                1 (y)
+              6 BINARY_OP               10 (-)
+             10 LOAD_CONST               1 (2)
+             12 BINARY_OP                8 (**)
+             16 STORE_FAST               2 (z)
+
+  6          18 LOAD_FAST                2 (z)
+             20 LOAD_ATTR                1 (NULL|self + sum)
+             40 CALL                     0
+             48 RETURN_VALUE
