@@ -1,4 +1,4 @@
-Basic usage of torch profiler 
+## Basic usage of torch profiler 
 
 A traces folder will contain
 - txt with time taken by processes on the CPU and GPU
