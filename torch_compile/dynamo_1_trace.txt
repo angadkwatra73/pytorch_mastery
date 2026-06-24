@@ -1,0 +1,17 @@
+V0623 12:47:09.566000 17950 torch/_dynamo/output_graph.py:2685] [0/0] [__graph_code] TRACED GRAPH
+V0623 12:47:09.566000 17950 torch/_dynamo/output_graph.py:2685] [0/0] [__graph_code]  ===== __compiled_fn_1_a8dfe397_f496_4a8a_b26a_bad6b79b3a43 =====
+V0623 12:47:09.566000 17950 torch/_dynamo/output_graph.py:2685] [0/0] [__graph_code]  /home/sheldon/Desktop/xla/venv2/lib/python3.12/site-packages/torch/fx/_lazy_graph_module.py class GraphModule(torch.nn.Module):
+V0623 12:47:09.566000 17950 torch/_dynamo/output_graph.py:2685] [0/0] [__graph_code]     def forward(self, L_x_: "f32[200][1]cuda:0", L_y_: "f32[200][1]cuda:0"):
+V0623 12:47:09.566000 17950 torch/_dynamo/output_graph.py:2685] [0/0] [__graph_code]         l_x_ = L_x_
+V0623 12:47:09.566000 17950 torch/_dynamo/output_graph.py:2685] [0/0] [__graph_code]         l_y_ = L_y_
+V0623 12:47:09.566000 17950 torch/_dynamo/output_graph.py:2685] [0/0] [__graph_code]
+V0623 12:47:09.566000 17950 torch/_dynamo/output_graph.py:2685] [0/0] [__graph_code]         # File: /home/sheldon/Desktop/xla/torch_compile/dynamo_1.py:5 in mse, code: z = (x - y) ** 2
+V0623 12:47:09.566000 17950 torch/_dynamo/output_graph.py:2685] [0/0] [__graph_code]         sub: "f32[200][1]cuda:0" = l_x_ - l_y_;  l_x_ = l_y_ = None
+V0623 12:47:09.566000 17950 torch/_dynamo/output_graph.py:2685] [0/0] [__graph_code]         z: "f32[200][1]cuda:0" = sub ** 2;  sub = None
+V0623 12:47:09.566000 17950 torch/_dynamo/output_graph.py:2685] [0/0] [__graph_code]
+V0623 12:47:09.566000 17950 torch/_dynamo/output_graph.py:2685] [0/0] [__graph_code]         # File: /home/sheldon/Desktop/xla/torch_compile/dynamo_1.py:6 in mse, code: return z.sum()
+V0623 12:47:09.566000 17950 torch/_dynamo/output_graph.py:2685] [0/0] [__graph_code]         sum_1: "f32[][]cuda:0" = z.sum();  z = None
+V0623 12:47:09.566000 17950 torch/_dynamo/output_graph.py:2685] [0/0] [__graph_code]         return (sum_1,)
+V0623 12:47:09.566000 17950 torch/_dynamo/output_graph.py:2685] [0/0] [__graph_code]
+V0623 12:47:09.566000 17950 torch/_dynamo/output_graph.py:2685] [0/0] [__graph_code]
+tensor(354.4238, device='cuda:0')

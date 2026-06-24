@@ -1,0 +1,45 @@
+V0623 15:57:19.687000 23721 torch/_dynamo/output_graph.py:2685] [0/0] [__graph_code] TRACED GRAPH
+V0623 15:57:19.687000 23721 torch/_dynamo/output_graph.py:2685] [0/0] [__graph_code]  ===== __compiled_fn_1_fb691bb3_15ce_44f2_894b_3b91a5ccd7ea =====
+V0623 15:57:19.687000 23721 torch/_dynamo/output_graph.py:2685] [0/0] [__graph_code]  /home/sheldon/Desktop/xla/venv2/lib/python3.12/site-packages/torch/fx/_lazy_graph_module.py class GraphModule(torch.nn.Module):
+V0623 15:57:19.687000 23721 torch/_dynamo/output_graph.py:2685] [0/0] [__graph_code]     def forward(self, L_x_: "f32[200][1]cpu"):
+V0623 15:57:19.687000 23721 torch/_dynamo/output_graph.py:2685] [0/0] [__graph_code]         l_x_ = L_x_
+V0623 15:57:19.687000 23721 torch/_dynamo/output_graph.py:2685] [0/0] [__graph_code]
+V0623 15:57:19.687000 23721 torch/_dynamo/output_graph.py:2685] [0/0] [__graph_code]         # File: /home/sheldon/Desktop/xla/torch_compile/dynamo_2_branching.py:5 in fn, code: y = x ** 2
+V0623 15:57:19.687000 23721 torch/_dynamo/output_graph.py:2685] [0/0] [__graph_code]         y: "f32[200][1]cpu" = l_x_ ** 2;  l_x_ = None
+V0623 15:57:19.687000 23721 torch/_dynamo/output_graph.py:2685] [0/0] [__graph_code]
+V0623 15:57:19.687000 23721 torch/_dynamo/output_graph.py:2685] [0/0] [__graph_code]         # File: /home/sheldon/Desktop/xla/torch_compile/dynamo_2_branching.py:7 in fn, code: return (n + 1) * y
+V0623 15:57:19.687000 23721 torch/_dynamo/output_graph.py:2685] [0/0] [__graph_code]         mul: "f32[200][1]cpu" = 3 * y;  y = None
+V0623 15:57:19.687000 23721 torch/_dynamo/output_graph.py:2685] [0/0] [__graph_code]         return (mul,)
+V0623 15:57:19.687000 23721 torch/_dynamo/output_graph.py:2685] [0/0] [__graph_code]
+V0623 15:57:19.687000 23721 torch/_dynamo/output_graph.py:2685] [0/0] [__graph_code]
+V0623 15:57:26.640000 23721 torch/_dynamo/output_graph.py:2685] [0/1] [__graph_code] TRACED GRAPH
+V0623 15:57:26.640000 23721 torch/_dynamo/output_graph.py:2685] [0/1] [__graph_code]  ===== __compiled_fn_3_5979ee00_dcba_4513_8143_76fd0204a67b =====
+V0623 15:57:26.640000 23721 torch/_dynamo/output_graph.py:2685] [0/1] [__graph_code]  /home/sheldon/Desktop/xla/venv2/lib/python3.12/site-packages/torch/fx/_lazy_graph_module.py class GraphModule(torch.nn.Module):
+V0623 15:57:26.640000 23721 torch/_dynamo/output_graph.py:2685] [0/1] [__graph_code]     def forward(self, L_x_: "f32[200][1]cpu", L_n_: "Sym(s86)"):
+V0623 15:57:26.640000 23721 torch/_dynamo/output_graph.py:2685] [0/1] [__graph_code]         l_x_ = L_x_
+V0623 15:57:26.640000 23721 torch/_dynamo/output_graph.py:2685] [0/1] [__graph_code]         l_n_ = L_n_
+V0623 15:57:26.640000 23721 torch/_dynamo/output_graph.py:2685] [0/1] [__graph_code]
+V0623 15:57:26.640000 23721 torch/_dynamo/output_graph.py:2685] [0/1] [__graph_code]         # File: /home/sheldon/Desktop/xla/torch_compile/dynamo_2_branching.py:5 in fn, code: y = x ** 2
+V0623 15:57:26.640000 23721 torch/_dynamo/output_graph.py:2685] [0/1] [__graph_code]         y: "f32[200][1]cpu" = l_x_ ** 2;  l_x_ = None
+V0623 15:57:26.640000 23721 torch/_dynamo/output_graph.py:2685] [0/1] [__graph_code]
+V0623 15:57:26.640000 23721 torch/_dynamo/output_graph.py:2685] [0/1] [__graph_code]         # File: /home/sheldon/Desktop/xla/torch_compile/dynamo_2_branching.py:7 in fn, code: return (n + 1) * y
+V0623 15:57:26.640000 23721 torch/_dynamo/output_graph.py:2685] [0/1] [__graph_code]         add: "Sym(s86 + 1)" = l_n_ + 1;  l_n_ = None
+V0623 15:57:26.640000 23721 torch/_dynamo/output_graph.py:2685] [0/1] [__graph_code]         mul: "f32[200][1]cpu" = add * y;  add = y = None
+V0623 15:57:26.640000 23721 torch/_dynamo/output_graph.py:2685] [0/1] [__graph_code]         return (mul,)
+V0623 15:57:26.640000 23721 torch/_dynamo/output_graph.py:2685] [0/1] [__graph_code]
+V0623 15:57:26.640000 23721 torch/_dynamo/output_graph.py:2685] [0/1] [__graph_code]
+V0623 15:57:27.332000 23721 torch/_dynamo/output_graph.py:2685] [0/2] [__graph_code] TRACED GRAPH
+V0623 15:57:27.332000 23721 torch/_dynamo/output_graph.py:2685] [0/2] [__graph_code]  ===== __compiled_fn_5_a6938122_3e9f_4fd8_ad97_e43e0ea6866a =====
+V0623 15:57:27.332000 23721 torch/_dynamo/output_graph.py:2685] [0/2] [__graph_code]  /home/sheldon/Desktop/xla/venv2/lib/python3.12/site-packages/torch/fx/_lazy_graph_module.py class GraphModule(torch.nn.Module):
+V0623 15:57:27.332000 23721 torch/_dynamo/output_graph.py:2685] [0/2] [__graph_code]     def forward(self, L_x_: "f32[200][1]cpu", L_n_: "Sym(s86)"):
+V0623 15:57:27.332000 23721 torch/_dynamo/output_graph.py:2685] [0/2] [__graph_code]         l_x_ = L_x_
+V0623 15:57:27.332000 23721 torch/_dynamo/output_graph.py:2685] [0/2] [__graph_code]         l_n_ = L_n_
+V0623 15:57:27.332000 23721 torch/_dynamo/output_graph.py:2685] [0/2] [__graph_code]
+V0623 15:57:27.332000 23721 torch/_dynamo/output_graph.py:2685] [0/2] [__graph_code]         # File: /home/sheldon/Desktop/xla/torch_compile/dynamo_2_branching.py:5 in fn, code: y = x ** 2
+V0623 15:57:27.332000 23721 torch/_dynamo/output_graph.py:2685] [0/2] [__graph_code]         y: "f32[200][1]cpu" = l_x_ ** 2;  l_x_ = None
+V0623 15:57:27.332000 23721 torch/_dynamo/output_graph.py:2685] [0/2] [__graph_code]
+V0623 15:57:27.332000 23721 torch/_dynamo/output_graph.py:2685] [0/2] [__graph_code]         # File: /home/sheldon/Desktop/xla/torch_compile/dynamo_2_branching.py:9 in fn, code: return y / n
+V0623 15:57:27.332000 23721 torch/_dynamo/output_graph.py:2685] [0/2] [__graph_code]         truediv: "f32[200][1]cpu" = y / l_n_;  y = l_n_ = None
+V0623 15:57:27.332000 23721 torch/_dynamo/output_graph.py:2685] [0/2] [__graph_code]         return (truediv,)
+V0623 15:57:27.332000 23721 torch/_dynamo/output_graph.py:2685] [0/2] [__graph_code]
+V0623 15:57:27.332000 23721 torch/_dynamo/output_graph.py:2685] [0/2] [__graph_code]
