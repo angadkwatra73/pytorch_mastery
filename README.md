@@ -9,7 +9,7 @@ The goal is to deeply understand how AI models are compiled, optimized and run d
   - How do you view kernel calls?
   - To profile time on GPU vs CPU
 -  [ ] FX Graph
--  [] Torch Dynamo
+-  [ ] Torch Dynamo
     - [x] Tracing - control flow and retracing
     - [x] Guards 
     - [x] Symbolic Shapes
