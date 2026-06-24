@@ -1,0 +1,76 @@
+V0624 18:32:18.499000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode] ORIGINAL BYTECODE mse /home/sheldon/Desktop/xla/torch_compile/dynamo_1.py line 3
+V0624 18:32:18.499000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]   3           0 RESUME                   0
+V0624 18:32:18.499000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]
+V0624 18:32:18.499000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]   5           2 LOAD_FAST                0 (x)
+V0624 18:32:18.499000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]               4 LOAD_FAST                1 (y)
+V0624 18:32:18.499000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]               6 BINARY_OP               10 (-)
+V0624 18:32:18.499000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]              10 LOAD_CONST               1 (2)
+V0624 18:32:18.499000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]              12 BINARY_OP                8 (**)
+V0624 18:32:18.499000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]              16 STORE_FAST               2 (z)
+V0624 18:32:18.499000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]
+V0624 18:32:18.499000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]   6          18 LOAD_FAST                2 (z)
+V0624 18:32:18.499000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]              20 LOAD_ATTR                1 (NULL|self + sum)
+V0624 18:32:18.499000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]              40 CALL                     0
+V0624 18:32:18.499000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]              48 RETURN_VALUE
+V0624 18:32:18.499000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]
+V0624 18:32:18.499000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode] MODIFIED BYTECODE mse /home/sheldon/Desktop/xla/torch_compile/dynamo_1.py line 3
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]   3           0 RESUME                   0
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]               2 LOAD_GLOBAL              3 (NULL + __import_torch_dot__dynamo_dot_graph_bytecode_inputs)
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]              12 LOAD_ATTR                4 (store_user_object_weakrefs)
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]              32 COPY                     1
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]              34 STORE_FAST               4 (tmp_1)
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]              36 LOAD_GLOBAL              7 (NULL + __import_torch_dot__dynamo_dot_utils)
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]              46 LOAD_ATTR                8 (get_current_stream)
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]              66 COPY                     1
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]              68 STORE_FAST               5 (tmp_2)
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]              70 LOAD_GLOBAL             11 (NULL + __import_torch)
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]              80 LOAD_ATTR               12 (device)
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             100 COPY                     1
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             102 STORE_FAST               6 (tmp_3)
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             104 LOAD_CONST               2 ('cuda')
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             106 LOAD_CONST               3 (0)
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             108 CALL                     2
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             116 CALL                     1
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             124 STORE_FAST               7 (tmp_4)
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             126 LOAD_FAST                7 (tmp_4)
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             128 CALL                     1
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             136 POP_TOP
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             138 LOAD_GLOBAL             15 (NULL + __compiled_fn_1_2e5c5d52_f4b6_4c6f_82f8_7bd48f5268f4)
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             148 LOAD_GLOBAL              7 (NULL + __import_torch_dot__dynamo_dot_utils)
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             158 LOAD_ATTR               16 (record_pregraph_bytecode_enter)
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             178 COPY                     1
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             180 STORE_FAST               8 (tmp_5)
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             182 CALL                     0
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             190 STORE_FAST               9 (tmp_6)
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             192 LOAD_FAST                0 (x)
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             194 LOAD_FAST                1 (y)
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             196 LOAD_GLOBAL              7 (NULL + __import_torch_dot__dynamo_dot_utils)
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             206 LOAD_ATTR               18 (record_pregraph_bytecode_exit)
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             226 COPY                     1
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             228 STORE_FAST              10 (tmp_7)
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             230 LOAD_FAST                9 (tmp_6)
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             232 CALL                     1
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             240 POP_TOP
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             242 CALL                     2
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             250 STORE_FAST               3 (graph_out_0)
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             252 BUILD_LIST               0
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             254 LOAD_FAST                3 (graph_out_0)
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             256 LOAD_CONST               3 (0)
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             258 BINARY_SUBSCR
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             262 BUILD_LIST               0
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             264 BUILD_LIST               0
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             266 SWAP                     2
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             268 BUILD_LIST               0
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             270 LIST_EXTEND              2
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             272 POP_TOP
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             274 BUILD_LIST               1
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             276 SWAP                     2
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             278 DELETE_FAST              3 (graph_out_0)
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             280 SWAP                     3
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             282 POP_TOP
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             284 POP_TOP
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]             286 RETURN_VALUE
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]
+V0624 18:32:18.858000 30819 torch/_dynamo/convert_frame.py:1595] [0/0] [__bytecode]
+tensor(414.8679, device='cuda:0')
