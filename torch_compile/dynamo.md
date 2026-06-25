@@ -36,7 +36,7 @@ Consists mainly of 4 major concepts
 - use TORCH LOGS = guards to see the guards produced
 - use TORCH_LOGS = recompiles to see when guards fail and the model recompiles
 
-## Symbolic Shapes - 
+## Symbolic Shapes 
 - not to be confused with symbolic execution
 - in dynamo_2.py when recompiling the first time -> it uses SymInt variable
 - Static shapes by default
@@ -54,8 +54,8 @@ For a function without graph breaks,  the tracingg process of a program calls t 
 1. First call to funciono
 -  Traces the function into an FX graph
     - FX graph is compiled by the compiler into efficieint low level code ( default inductor)
-- Rewrites the bytecode of thhe function to call the compiled function
-- CPython  is given the new bytecode to run  in the Eval Frame
+    - Rewrites the bytecode of thhe function to call the compiled function
+    - CPython  is given the new bytecode to run  in the Eval Frame
 
 2.Second call to the function
 - checksk the guards fromm the first call against the new args, since they're same as before they pass
