@@ -14,7 +14,7 @@ The goal is to deeply understand how AI models are compiled, optimized and run d
     - [x] Guards 
     - [x] Symbolic Shapes
     - [x] Flags - graph capture, dynamo, breaks etc
-    - [ ] Graph Breaks
+    - [x] Graph Breaks
  
 -  [ ] torch.compile()
 -  [ ] torch.export()
@@ -30,13 +30,13 @@ The goal is to deeply understand how AI models are compiled, optimized and run d
 
 ### torch compile
 - examples showing differnt aspects of torch dynamo
-
+- including branching, guards and graph breaks
 
 
 Resources 
 - [x] [Torch NN and Parameters](https://docs.pytorch.org/tutorials/beginner/introyt/modelsyt_tutorial.html)
 - [x] [Using torch profiler](https://huggingface.co/blog/torch-profiler)
-- [ ] ⭐[Torch Dynamo Deep Dive](https://docs.pytorch.org/docs/2.12/user_guide/torch_compiler/torch.compiler_dynamo_deepdive.html)
+- [x] ⭐[Torch Dynamo Deep Dive](https://docs.pytorch.org/docs/2.12/user_guide/torch_compiler/torch.compiler_dynamo_deepdive.html)
 - [ ] ⭐[Torch compile](https://docs.pytorch.org/docs/2.12/user_guide/torch_compiler/compile/programming_model.html)
 - [ ] [Graph Break Analysis](https://arxiv.org/abs/2509.16248)
 
