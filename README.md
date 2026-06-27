@@ -38,6 +38,7 @@ Resources
 - [x] [Using torch profiler](https://huggingface.co/blog/torch-profiler)
 - [x] ⭐[Torch Dynamo Deep Dive](https://docs.pytorch.org/docs/2.12/user_guide/torch_compiler/torch.compiler_dynamo_deepdive.html)
 - [ ] ⭐[Torch compile](https://docs.pytorch.org/docs/2.12/user_guide/torch_compiler/compile/programming_model.html)
+- [ ] [Torch export Programming model](https://docs.pytorch.org/docs/2.12/user_guide/torch_compiler/export/programming_model.html)
 - [ ] [Graph Break Analysis](https://arxiv.org/abs/2509.16248)
 
 

@@ -1,0 +1,19 @@
+V0627 10:03:06.974000 10774 torch/_dynamo/symbolic_convert.py:4699] [0/0] [__graph_breaks] Graph break in user code at /home/sheldon/Desktop/xla/torch_compile/dynamo_4_graphbreaks.py:11
+V0627 10:03:06.974000 10774 torch/_dynamo/symbolic_convert.py:4699] [0/0] [__graph_breaks] Graph Break Reason: Encountered graph break when attempting to trace CALL: a function call, e.g. f(x, y):
+V0627 10:03:06.974000 10774 torch/_dynamo/symbolic_convert.py:4699] [0/0] [__graph_breaks]
+V0627 10:03:06.974000 10774 torch/_dynamo/symbolic_convert.py:4699] [0/0] [__graph_breaks] Failed to trace builtin operator
+V0627 10:03:06.974000 10774 torch/_dynamo/symbolic_convert.py:4699] [0/0] [__graph_breaks]   Explanation: Dynamo does not know how to trace builtin operator `print` with argument types ['str'] (has_kwargs False)
+V0627 10:03:06.974000 10774 torch/_dynamo/symbolic_convert.py:4699] [0/0] [__graph_breaks]   Hint: Avoid calling builtin `print` with argument types ['str']. Consider using an equivalent alternative function/method to `print`.
+V0627 10:03:06.974000 10774 torch/_dynamo/symbolic_convert.py:4699] [0/0] [__graph_breaks]   Hint: If you are attempting to call a logging function (e.g. `print`), you can try adding it to `torch._dynamo.config.reorderable_logging_functions`.
+V0627 10:03:06.974000 10774 torch/_dynamo/symbolic_convert.py:4699] [0/0] [__graph_breaks]   Hint: Please report an issue to PyTorch.
+V0627 10:03:06.974000 10774 torch/_dynamo/symbolic_convert.py:4699] [0/0] [__graph_breaks]
+V0627 10:03:06.974000 10774 torch/_dynamo/symbolic_convert.py:4699] [0/0] [__graph_breaks]   Developer debug context: builtin print [<class 'torch._dynamo.variables.constant.ConstantVariable'>] False
+V0627 10:03:06.974000 10774 torch/_dynamo/symbolic_convert.py:4699] [0/0] [__graph_breaks]
+V0627 10:03:06.974000 10774 torch/_dynamo/symbolic_convert.py:4699] [0/0] [__graph_breaks]  For more details about this graph break, please visit: https://meta-pytorch.github.io/compile-graph-break-site/gb/gb0059.html
+V0627 10:03:06.974000 10774 torch/_dynamo/symbolic_convert.py:4699] [0/0] [__graph_breaks]
+V0627 10:03:06.974000 10774 torch/_dynamo/symbolic_convert.py:4699] [0/0] [__graph_breaks] User code traceback:
+V0627 10:03:06.974000 10774 torch/_dynamo/symbolic_convert.py:4699] [0/0] [__graph_breaks]   File "/home/sheldon/Desktop/xla/torch_compile/dynamo_4_graphbreaks.py", line 14, in <module>
+V0627 10:03:06.974000 10774 torch/_dynamo/symbolic_convert.py:4699] [0/0] [__graph_breaks]     fn(torch.randn(4))
+V0627 10:03:06.974000 10774 torch/_dynamo/symbolic_convert.py:4699] [0/0] [__graph_breaks]   File "/home/sheldon/Desktop/xla/torch_compile/dynamo_4_graphbreaks.py", line 11, in fn
+V0627 10:03:06.974000 10774 torch/_dynamo/symbolic_convert.py:4699] [0/0] [__graph_breaks]     print("Hi")
+V0627 10:03:06.974000 10774 torch/_dynamo/symbolic_convert.py:4699] [0/0] [__graph_breaks]
