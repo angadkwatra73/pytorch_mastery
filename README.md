@@ -26,11 +26,14 @@ The goal is to deeply understand how AI models are compiled, optimized and run d
 - exporting the model
 
 ### profiling
-- how to profile a basic 
+- how to profile a torch function 
 
 ### torch compile
 - examples showing differnt aspects of torch dynamo
 - including branching, guards and graph breaks
+
+### graph breaks
+- examples where functions breaks, and the cause 
 
 
 Resources 
