@@ -32,15 +32,17 @@ Consists mainly of 4 major concepts
 - guard breaking means the tracing is not accurate so we must change
 - It is an assumption made in order to specialise a frame for one set of example inputs
 - reusing the graph is only valid if these assumptions hold on the new inputs
+- guards have a compile time and run time overhead
 - Therefore GUARD FAIL triggers RECOMPILATION
 - use TORCH LOGS = guards to see the guards produced
 - use TORCH_LOGS = recompiles to see when guards fail and the model recompiles
+
 
 ## Symbolic Shapes 
 - not to be confused with symbolic execution
 - in dynamo_2.py when recompiling the first time -> it uses SymInt variable
 - Static shapes by default
-- 
+- Not all shapes need to be symbolic, can use make dynamic from pytorch to set certain parameters as dyanmic
 
 Unti now we have a tracer that can trace Pytorch operations on tensors and integers and has a 
 calling system which knows when to use prev called graph, and trtrace

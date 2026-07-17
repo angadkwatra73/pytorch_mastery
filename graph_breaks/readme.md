@@ -1,7 +1,7 @@
 If we look at branching two thingns can happen
 - The tracer to form an FX graph, has to choose a path
     - that is when dynamo can handle the opeeration
-- If dynamo cannont handlel the if - then it causes the break
+- If dynamo cannont handlel the if dependency - then it causes the break
     - ? or maybe it cannot guard it? somemthihng
 
 ## Graph Break
@@ -26,8 +26,8 @@ Functions that are not supported, printing and logging may not concern us much.
     - graph breaks flag will tell you where the graph break is called
 
 What we understand 
- - data depended operation will cause a graph break 
-- here data means the tesnor
+- data depended operation will cause a graph break 
+- here data means the tesnor data - graph is built with tensor ops
 
 //should be linked to how 
 
